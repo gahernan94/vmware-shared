@@ -147,8 +147,8 @@ resource "vcd_vapp_org_network" "tutorial_network" {
 resource "vcd_vapp_vm" "vm_1" {
   vapp_name     = vcd_vapp.vmware_tutorial_vapp.name
   name          = "vm-rhcos-01"
-  catalog_name  = "Public Catalog - Additional Templates"
-  template_name = "rhcos OpenShift 4.11.2"
+  catalog_name  = "Personal"
+  template_name = "rhcos OpenShift 4 -personal"
   memory        = 8192
   cpus          = 2
 
