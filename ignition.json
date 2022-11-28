@@ -1,0 +1,25 @@
+{
+    "ignition": {
+        "version": "3.3.0"
+    },
+    "storage": {
+        "files": [
+            {
+                "path": "/etc/hostname",
+                "mode": 420,
+                "overwrite": true,
+                "contents": {
+                    "source": "data:,core1"
+                }
+            }
+        ]
+    },
+    "passwd": {
+        "users": [
+            {
+                "name": "core",
+                "passwordHash": "PNQHqA7xZADWs"
+            }
+        ]
+    }
+}
