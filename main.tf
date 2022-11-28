@@ -154,6 +154,8 @@ resource "vcd_vapp_vm" "vm_1" {
 
   guest_properties = {
     "guest.hostname" = "vm-rhcos"
+    "guestinfo.ignition.config.data.encoding" = "base64"
+    "guestinfo.ignition.config.data"          = base64encode(file("ignition.json"))
   }
 
   network {
@@ -162,12 +164,7 @@ resource "vcd_vapp_vm" "vm_1" {
     ip_allocation_mode = "POOL"
     is_primary         = true
   }
-  
-guest_properties = {
-    "guestinfo.ignition.config.data.encoding" = "base64"
-    "guestinfo.ignition.config.data"          = base64encode(file("ignition.json"))
-  }
-  
+    
   customization {
     auto_generate_password     = true
   }
